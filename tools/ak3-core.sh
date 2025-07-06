@@ -1116,6 +1116,8 @@ patch_kpm() {
             
             if $KPM_PATCHER_PATH; then
                 if [ -f "$KERNEL_IMAGE" ]; then
+					rm image
+					mv oImage Image
                     ui_print " "
                     ui_print "✅ KPM补丁成功应用!"
                     ui_print "✅ KPM patch applied successfully!"
