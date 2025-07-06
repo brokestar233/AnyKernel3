@@ -1,0 +1,5 @@
+#!/system/bin/sh
+Curl_Path=$AKHOME/tools/Curl_Lib
+export LD_LIBRARY_PATH=$Curl_Path
+export CURL_CA_BUNDLE=$Curl_Path/libcacert.pem.so
+exec $Curl_Path/curl.elf "$@"
